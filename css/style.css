@@ -2,28 +2,27 @@
   box-sizing: border-box;
 }
 
-:root {
-  margin: 0;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0;
   font-family: "Roboto", 'Times New Roman', serif;
 }
 
 header {
-  width: 100%;
   text-align: center;
+  width: 100vw;
 }
 
 nav {
-  float: left;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
 
-/* Force 50x50 canvas to scale properly */
+/* Force 500x500 canvas to scale properly */
 canvas {
   height: 500px;
   width: 500px;
@@ -39,4 +38,22 @@ aside {
   background-color: #ebebeb;
   border-radius: 25px;
   text-align: center;
+}
+
+button {
+  margin: 5px 5px 0 0;
+}
+
+button img {
+    width: 40px;
+    height: 40px;
+}
+
+.selected {
+  border: 4px solid #111111;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }

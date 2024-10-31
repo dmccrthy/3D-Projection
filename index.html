@@ -3,6 +3,9 @@
   <head>
     <title>3D Projection Demo | Dan McCarthy</title>
     <meta charset="utf-8">
+    <meta name="author" content="Dan McCarthy">
+    <meta name="description" content="A 3D perspective projection demo using HTML, CSS, and JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,24 +16,30 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+    <!-- Page header & navigation -->
     <header>
       <nav>
         <a href="https://www.dmccarthy.org/projects">&lt; Return Home</a>
       </nav>
       <h1>3D Projection Demo</h1>
     </header>
-    <canvas id="chart" width="100px" height="100px"></canvas>
-    <!-- Move Camera -->
+    <!-- 2D canvas & shape presets -->
+    <div class="container">
+      <canvas id="chart" width="500px" height="500px"></canvas>
+      <span>
+        <button class="selected"><img src="./icons/square.svg" alt="Square Icon"></button>
+        <button><img src="./icons/triangle.svg" alt="Triangle Icon"></button>
+      </span>
+    </div>
+    <!-- Camera Options -->
     <aside>
-      <h2>Settings:</h2>
-      <button onclick="updateCanvas()">clikc</button>
-      <button onclick="clearCanvas()">clikc</button>
+      <h2>Rotate Camera:</h2>
       <div>
-        <h4>X</h4>
+        <h4>X: 1</h4>
         <input id="x-slider" type="range" min="1" max="20" value="1">
-        <h4>Y</h4>
+        <h4>Y: 1</h4>
         <input id="y-slider" type="range" min="1" max="20" value="1">
-        <h4>Z</h4>
+        <h4>Z: 0</h4>
         <input id="z-slider" type="range" min="-10" max="10" value="0">
       </div>
     </aside>
