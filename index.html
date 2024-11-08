@@ -26,21 +26,21 @@
     <!-- 2D canvas & shape presets -->
     <div class="container">
       <canvas id="chart" width="500px" height="500px"></canvas>
-      <span>
-        <button class="selected"><img src="./icons/square.svg" alt="Square Icon"></button>
-        <button><img src="./icons/triangle.svg" alt="Triangle Icon"></button>
+      <span id="presets">
+        <button onclick="updatePreset('square')" class="selected"><img src="./icons/square.svg" alt="Square Icon"></button>
+        <button onclick="updatePreset('triangle')"><img src="./icons/triangle.svg" alt="Triangle Icon"></button>
       </span>
     </div>
     <!-- Camera Options -->
     <aside>
-      <h2>Rotate Camera:</h2>
+      <h3>Rotate Camera:</h3>
       <div>
         <h4>X: 1</h4>
-        <input id="x-slider" type="range" min="1" max="20" value="1">
+        <input id="x-slider" aria-label="x-axis slider" type="range" min="1" max="20" value="1">
         <h4>Y: 1</h4>
-        <input id="y-slider" type="range" min="1" max="20" value="1">
+        <input id="y-slider" aria-label="y-axis slider" type="range" min="1" max="20" value="1">
         <h4>Z: 0</h4>
-        <input id="z-slider" type="range" min="-10" max="10" value="0">
+        <input id="z-slider" aria-label="z-axis slider" type="range" min="-10" max="10" value="0">
       </div>
     </aside>
     <!-- JS import -->
